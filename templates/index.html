@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Index
+{% endblock %}
+
+{% block body %}
+<form action="{{ url_for('register') }}" method="post">
+    Name: <input name="name" type="text">
+    <br/>
+    Dorm:
+    <select name="dorm">
+        <option value=""></option>
+        <option value="Пункт1">Пункт1</option>
+        <option value="Пункт2">Пункт2</option>
+    </select>
+    <br/>
+    <input type="submit" value="Register">
+</form>
+{% endblock %}
